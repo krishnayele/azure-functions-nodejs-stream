@@ -5,7 +5,7 @@ app.http('streamRequest', {
     methods: ['POST'],
     authLevel: 'anonymous',
     handler: async (request: HttpRequest, context: InvocationContext) => {
-        await writeOutputFile("Test")
+        console.log("Test")
         await writeOutputFile(request.body);
         return {
             body: 'Done!',
@@ -13,4 +13,5 @@ app.http('streamRequest', {
         };
     },
 });
+
 

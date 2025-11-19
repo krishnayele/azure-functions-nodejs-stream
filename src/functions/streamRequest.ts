@@ -1,4 +1,4 @@
-import { app, HttpRequest, InvocationContext } from '@azure/functions';
+    import { app, HttpRequest, InvocationContext } from '@azure/functions';
 import { writeOutputFile } from '../writeOutputFile';
 
 app.http('streamRequest', {
@@ -6,10 +6,11 @@ app.http('streamRequest', {
     authLevel: 'anonymous',
     handler: async (request: HttpRequest, context: InvocationContext) => {
         await writeOutputFile(request.body);
-
+        console.info("Information message")
         return {
             body: 'Done!',
             status: 200,
         };
     },
 });
+

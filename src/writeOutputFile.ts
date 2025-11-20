@@ -11,6 +11,7 @@ export async function writeOutputFile(body: ReadableStream): Promise<void> {
     const intervalId = setInterval(() => console.log(`Progress: ${convertToMb(length)}mb`), 100);
     try {
         for await (const chunk of body.values()) {
+            console.log('Inside for loop')
             length += chunk.length;
             chunkCount += 1;
             writeStream.write(chunk);

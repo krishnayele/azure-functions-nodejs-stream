@@ -9,11 +9,12 @@ app.http('streamRequest', {
         console.info("Information message");
         console.log(request)
         return {
-            body: request.body,
+            body: "function completed!",
             status: 200,
         };
     },
 });
+
 
 
 

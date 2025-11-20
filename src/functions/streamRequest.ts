@@ -1,4 +1,4 @@
-    import { app, HttpRequest, InvocationContext } from '@azure/functions';
+import { app, HttpRequest, InvocationContext } from '@azure/functions';
 import { writeOutputFile } from '../writeOutputFile';
 
 app.http('streamRequest', {
@@ -9,11 +9,13 @@ app.http('streamRequest', {
         console.info("Information message");
         console.log(request)
         return {
-            body: request.body,
+            body: "function completed!",
             status: 200,
         };
     },
 });
+
+
 
 
 

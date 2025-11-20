@@ -18,7 +18,9 @@ export async function writeOutputFile(body: ReadableStream): Promise<void> {
     } finally {
         clearInterval(intervalId);
     }
-
+    console.log(`Inside writeOutputFile.ts`);
+    console.log(`length calculated ${length}`);
+    console.log(`Chunks count ${chunkCount}`);
     console.log(`Done! Received ${convertToMb(length)}mb in ${chunkCount} chunks`);
 }
 

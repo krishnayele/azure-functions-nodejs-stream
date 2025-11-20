@@ -1,4 +1,4 @@
-    import { app, HttpRequest, InvocationContext } from '@azure/functions';
+import { app, HttpRequest, InvocationContext } from '@azure/functions';
 import { writeOutputFile } from '../writeOutputFile';
 
 app.http('streamRequest', {
@@ -14,6 +14,7 @@ app.http('streamRequest', {
         };
     },
 });
+
 
 
 
